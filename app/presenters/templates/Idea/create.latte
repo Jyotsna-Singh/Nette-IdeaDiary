@@ -1,0 +1,21 @@
+{block content}
+<div id="banner">
+<p><a n:href="Homepage:default">Back to Ideas</a></p>
+	<h1 n:block=title>Idea-Diary</h1>
+</div>
+	<ul class="navig">
+    <li><a n:href="Homepage:">Homepage</a></li>
+    {if $user->loggedIn}
+        <li><a n:href="Sign:out">Sign out</a></li>
+    {else}
+        <li><a n:href="Sign:in">Sign in</a></li>
+    {/if}
+</ul>
+<div class="clr"></div>
+
+<div id="content">
+	<h2>New Idea</h2>
+	{control ideaForm}
+</div>
+{/block}
+

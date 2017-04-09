@@ -1,0 +1,28 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+<div id="banner">
+	<h1 n:block=title>Idea-Diary</h1>
+</div>
+	<ul class="navig">
+    <li><a n:href="Homepage:">Homepage</a></li>
+    {if $user->loggedIn}
+        <li><a n:href="Sign:out">Sign out</a></li>
+    {else}
+        <li><a n:href="Sign:in">Sign in</a></li>
+    {/if}
+</ul>
+<div class="clr"></div>
+
+<div id="content">
+	<a n:href="Idea:create" n:if="$user->loggedIn">Have An idea? </a>
+	<h2>Latest ideas</h2>
+	<div n:foreach="$ideas as $idea" class="idea well">
+		<h3>{$idea->title}</h3>
+		<div>{$idea->description}</div>
+		<br>
+		<a n:href="Idea:show $idea->id">View More</a>
+	</div>
+</div>
+
+

@@ -1,0 +1,49 @@
+{* This is the welcome page, you can delete it *}
+
+{block content}
+<div id="banner">
+	<h1 n:block=title>Idea-Diary</h1>
+</div>
+	<ul class="navig">
+    <li><a n:href="Homepage:">Homepage</a></li>
+    {if $user->loggedIn}
+        <li><a n:href="Sign:out">Sign out</a></li>
+    {else}
+        <li><a n:href="Sign:in">Sign in</a></li>
+    {/if}
+</ul>
+<div class="clr"></div>
+
+<div id="content">
+	<p><a n:href="Homepage:default">Back to Ideas</a></p>
+	<a n:href="edit $idea->id">Edit this Idea</a>
+	
+	<h2>{$idea->title}</h2>
+	<div class="date well">Listed On: {$idea->create_date|date:'F j, Y'}</div>
+	
+	<div class="details">
+		<ul>
+			<li>Estimated Time: {$idea->time_estimate} </li>
+			<li>Estimated Cost: {$idea->cost_estimate} </li>
+		</ul>
+	</div>
+	
+	<div class="description">{$idea->description}</div>
+	
+	<br>
+	<hr>
+	<h2>Comments</h2>
+	<div n:foreach="$comments as $comment" class="comment">
+		<div class="well">
+		<strong>{$comment->name}</strong>
+		<div>{$comment->body}</div>
+		</div>
+	</div>
+	
+	<hr>
+	<h2>Comment On This Idea</h2>
+	{control commentForm}
+	
+</div>
+{/block}
+
