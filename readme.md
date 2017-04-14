@@ -1,4 +1,35 @@
-Nette Web Project
+# Idea Diary
+
+This project is a **Idea Diary** built with Nette Framework. Users can add ideas for projects on this website. Users can also view and edit their ideas. Guests can view and comment on the ideas using the comment box.
+
+* Features/Technologies: 
+  * Nette Framework
+  * MVC, PHP OOP, PHPMyAdmin
+  * MySQL CRUD, Superglobals (GET, POST)
+
+## Version
+1.0.0
+
+## Live Demo
+ [IdeaDiary](http://jyotsnasingh.com/projects/Nette/IdeaDiary/www/)
+
+
+## Usage
+
+**Home** | **View Idea**
+--- | ---
+Home Page | View Idea
+![alt text](https://github.com/Jyotsna-Singh/Nette-IdeaDiary/blob/master/www/home.PNG)  | ![alt text](https://github.com/Jyotsna-Singh/Nette-IdeaDiary/blob/master/www/idea.PNG)
+
+## Vendors
+Nette - [http://nette.org/](http://nette.org/)  
+ 
+
+## License
+MIT License
+
+
+About Nette 
 =================
 
 This is a simple, skeleton application using the [Nette](https://nette.org). This is meant to
